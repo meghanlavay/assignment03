@@ -5,14 +5,14 @@ let years;
 
 investment = parseFloat(prompt('Enter investment amount as xxxx.xx'));
 rate = parseFloat(prompt('Enter interest rate as xx.x'));
-years = parseInt(prompt('Enter the number of years'));
+years = parseInt(prompt('Enter the number of years you want to invest for'));
 
 futureValue = investment;
-for (let i = 1; i <= years; i++) {
+for (let i = 0; i < years; i++) {
     futureValue = futureValue + (futureValue * rate / 100);
 }
 
-document.write(`Investment amount: $${investment}<br>`);
-document.write(`Interest rate: $${rate}<br>`);
-document.write(`Years: $${years}<br>`);
-document.write(`Future value: $${furtureValue.toFixed(2) }<br>`);
+document.write(`Investment amount: $${investment.toFixed(2)}<br>`);
+document.write(`Interest rate: ${rate.toFixed(2)}%<br>`);
+document.write(`Years: ${years}<br>`);
+document.write(`Future value: $${futureValue.toFixed(2)}`);

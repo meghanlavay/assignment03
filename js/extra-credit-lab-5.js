@@ -2,6 +2,7 @@ let miles;
 let gallons;
 let mpg;
 let again = 'y';
+let i;
 
 do {
     miles = parseFloat(prompt('Enter miles driven'));
@@ -13,4 +14,10 @@ do {
         alert('One or both entries in invalid');
     }
     again = prompt('Run application again? (y or n)', 'y');
+        if (again === 'y' || again === 'n') {
+            break;
+        } else {
+            prompt('Run application again? (y or n)', 'y');
+            i++;
+        }
 } while (again === 'y');
